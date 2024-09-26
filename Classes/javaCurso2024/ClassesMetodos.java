@@ -49,14 +49,14 @@ public class ClassesMetodos {
 //		// Instanciando o Scanner
 		Scanner sc = new Scanner(System.in);
 		
-		int[] numero = {5, 7, 12};
+		int[] numero = new int[5];
 		
-		//for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 5; i++) {
 			
-		// System.out.println("Digite um numero: ");
-		// numero = {1,2,3};
-		//sc.nextLine();
-		// }
+		 System.out.println("Digite um numero: ");
+		 numero[i] = sc.nextInt();
+		sc.nextLine();
+		 }
 
 		//sc.nextLine();
 
@@ -73,7 +73,7 @@ public class ClassesMetodos {
 		System.out.println("A palavra " + palavra + " invertida fica da seguinte maneira: " + util.inverte(palavra));
 
 		// Faz a conta do fatorial de um numero:
-		System.out.println("O fatorial do numero: " + util.fatorial(numero[1]));
+		System.out.println("O fatorial do numero: " +  numero[1] + " é: " + util.fatorial(numero[1]));
 		
 		// Encontra o maior numero em um Array
 		System.out.println("O maior numero dentro desta lista é o: " + util.maior(numero));
