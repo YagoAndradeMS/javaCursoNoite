@@ -18,5 +18,8 @@
 	<classpathentry kind="src" path="Arrays"/>
 	<classpathentry kind="src" path="Listas"/>
 	<classpathentry kind="src" path="Herancas"/>
+	<classpathentry kind="src" path="Api"/>
+	<classpathentry kind="src" path="Banco"/>
+	<classpathentry kind="src" path="CRUD"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
