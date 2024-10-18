@@ -23,5 +23,11 @@
 	<classpathentry kind="src" path="CRUD"/>
 	<classpathentry kind="src" path="salvar"/>
 	<classpathentry kind="src" path="Gerente"/>
+	<classpathentry kind="src" path="InterfaceGrafica"/>
+	<classpathentry kind="src" path="CalculadoraInterface"/>
+	<classpathentry kind="src" path="InterfacesExercicios"/>
+	<classpathentry kind="src" path="Java Stream"/>
+	<classpathentry kind="src" path="Calculadoraw"/>
+	<classpathentry kind="src" path="EditorTexto"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
