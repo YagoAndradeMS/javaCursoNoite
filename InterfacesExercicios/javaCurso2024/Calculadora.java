@@ -56,7 +56,7 @@ public class Calculadora extends JFrame {
 	}
 	
 	public static void main(String[] args) {
-		SwingUtilities.invokeLater(() -> new MCalc());
+		SwingUtilities.invokeLater(() -> new Calculadora());
 	}
 }
 

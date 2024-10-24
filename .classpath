@@ -29,5 +29,6 @@
 	<classpathentry kind="src" path="Java Stream"/>
 	<classpathentry kind="src" path="Calculadoraw"/>
 	<classpathentry kind="src" path="EditorTexto"/>
+	<classpathentry kind="src" path="TCC"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
