@@ -2,8 +2,15 @@ package FlapBird;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class FlappyBird implements Jogo {
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
+import javaCurso2024.Desenvolvido;
+
+public class FlappyBird extends JPanel implements Jogo  {
+	
+	 private JFrame janelaPrincipal;
+	 
     private boolean gameOver = false;
     private int score = 0;
     public double ground_offset = 0;
@@ -17,7 +24,7 @@ public class FlappyBird implements Jogo {
     public Random gerador = new Random();
     public Timer timer_cano;
             
-    public FlappyBird() {
+    public FlappyBird(JFrame janelaPrincipal) {
         passaro = new Passaro(35, (getLargura() -112)/2 + 24/2);
         timer_cano  = new Timer(3, true, addCano());
         addCano().executa();
@@ -36,7 +43,7 @@ public class FlappyBird implements Jogo {
     }
 
     public int getLargura() {
-        return 384;
+        return 424;
     }
 
     public int getAltura() {
@@ -100,9 +107,11 @@ public class FlappyBird implements Jogo {
         t.imagem("Flap.png", 0, 0, 288, 512, 0, -background_offset, 0);
         t.imagem("Flap.png", 0, 0, 288, 512, 0, 288 - background_offset, 0);
         t.imagem("Flap.png", 0, 0, 288, 512, 0, 288 * 2 - background_offset, 0);
+        t.imagem("Flap.png", 0, 0, 288, 512, 0, 288 * 3 - background_offset, 0);
+        t.imagem("Flap.png", 0, 0, 288, 512, 0, 288 * 4 - background_offset, 0);
 
         if (gameOver) {
-            TelaGameOver gameOverScreen = new TelaGameOver(score, getLargura(), getAltura());
+            TelaGameOver gameOverScreen = new TelaGameOver(score, getLargura(), getAltura(), janelaPrincipal);
             gameOverScreen.drawGameOver(t.g);  // Passa o Graphics diretamente
         } else {
             // Desenha os elementos do jogo normalmente
@@ -124,6 +133,10 @@ public class FlappyBird implements Jogo {
             t.texto("Score: " + score, getLargura() - 100, 50, 20, Cor.BRANCO);  // Ajuste a posição e tamanho do texto conforme necessário
         }
     }
+    
+    public void reiniciarJogo() {
+        roda(); // Chama o método que reinicia o jogo
+    }
 
 
     public static void main(String[] args) {
@@ -131,6 +144,6 @@ public class FlappyBird implements Jogo {
     }
 
     private static void roda() {
-        new Motor(new FlappyBird());
+        new Motor(new FlappyBird(null));
     }
 }

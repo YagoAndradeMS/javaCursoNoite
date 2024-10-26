@@ -17,7 +17,7 @@ public class Cor
     /*
      * Cria uma cor dados os componentes entre 0 e 255
      */
-    private Cor(int r, int g, int b) {
+    Cor(int r, int g, int b) {
         this.r = r;
         this.g = g;
         this.b = b;
